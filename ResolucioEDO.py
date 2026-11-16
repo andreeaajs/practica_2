@@ -10,14 +10,13 @@ def der_vy(x,y):
     return dervy
 
 
-
-x = 3
-y = 0
-v_x = 0
-v_y = 0.6
-r = [x, y, v_x, v_y]
-x_t =[x]
-y_t=[y]
+x_0 = 0.2937
+v_y_0 = 1.5  
+y_0 = 0
+v_x_0 = 0
+r = [x_0, y_0, v_x_0, v_y_0]
+x_t =[x_0]
+y_t=[y_0]
 
 t = 0 
 h = 1/365
@@ -33,5 +32,5 @@ while t < 1:
     x_t.append(r[0])
     y_t.append(r[1])
 
-plt.scatter(x_t,y_t)
+plt.plot(x_t,y_t)
 plt.show()
