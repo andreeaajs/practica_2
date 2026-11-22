@@ -34,3 +34,10 @@ while t < 1:
 
 plt.plot(x_t,y_t)
 plt.show()
+
+# vector de direcció terra-sol
+
+r = np.array([x_t, y_t]) 
+dist = np.linalg.norm(r, axis=0)
+s = -r / dist
+s_3D = np.vstack([s, np.zeros(s.shape[1])])
