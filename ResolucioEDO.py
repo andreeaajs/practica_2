@@ -1,6 +1,6 @@
 
 import matplotlib.pyplot as plt
-
+import numpy as np
 def der_vx(x,y):
     dervx = -x/((x**2+y**2)**(3/2))
     return dervx
@@ -17,9 +17,11 @@ v_x_0 = 0
 r = [x_0, y_0, v_x_0, v_y_0]
 x_t =[x_0]
 y_t=[y_0]
+t_t = [0]
 
 t = 0 
 h = 1/365
+
 
 #[fx,fy,fvx,fvy]
 while t < 1:
@@ -31,6 +33,7 @@ while t < 1:
     r = [r[i] + (h/6)*(K1[i] +2*(K2[i] + K3[i]) + K4[i]) for i in range(4)]
     x_t.append(r[0])
     y_t.append(r[1])
+    t_t.append(t) 
 
 plt.plot(x_t,y_t)
 plt.show()
@@ -41,3 +44,6 @@ r = np.array([x_t, y_t])
 dist = np.linalg.norm(r, axis=0)
 s = -r / dist
 s_3D = np.vstack([s, np.zeros(s.shape[1])])
+
+# temps en hores
+t_h = np.array(t_t)*365.25*24 
