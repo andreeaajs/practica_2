@@ -38,6 +38,10 @@ s_nord=np.sum(s_I*u_N, axis=0)
 altura = np.arcsin(np.clip(s_zenit, -1.0, 1.0)) #np.clip per evitar errors de precisió numèrica que es vagin acumulant
 azimut = np.arctan2(s_est, s_nord)
 
+
+#------------------------------------------------------------------------------------------------------
+
+
 # GRAFIQUES
 
 alt_deg = np.degrees(altura)
@@ -64,6 +68,7 @@ plt.ylabel('Altura [°]')
 plt.title(f'Analema solar a les {T0}:00 h')
 plt.show()
 
+#-------------------------------------------------------------------------------------------------
 
 # CARTA SOLAR EN PROJECCIÓ POLAR
 
@@ -135,7 +140,10 @@ ax2.grid(True, alpha=0.3)
 plt.tight_layout()
 plt.show()
 
-# Simulació d'un rellotge de sol
+#------------------------------------------------------------------------------------------------------
+
+# SIMULACIÓ D'UN RELLOTGE DE SOL
+
 
 plt.figure(figsize=(8, 5))
 

@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 w=2*np.pi/24 #velocitat de rotacó de la terra
 phi_0=np.radians(23.43928) #angle d'inlinació de la terra respecte de z
-theta_0=1 #latitud
+theta_0= np.radians(41.50) #latitud (revisar)
 chi = np.radians(90 - 102.93768193) # longitud ecliptica del solstici - longitud ecliptica del periheli 
 R_T=1 #radi de la terra
 #radi en l'eix principal d'inèrcia

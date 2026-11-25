@@ -47,4 +47,4 @@ s = -r / dist
 s_3D = np.vstack([s, np.zeros(s.shape[1])])
 
 # temps en hores
-t_h = np.array(t_t)*365.25*24 
+t_h = np.array(t_t)*365.256*24 
