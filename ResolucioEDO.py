@@ -9,9 +9,10 @@ def der_vy(x,y):
     dervy = -y/((x**2+y**2)**(3/2))
     return dervy
 
-
-x_0 = 0.2937
-v_y_0 = 1.5  
+a= (2*np.pi)**(-2/3) # semieix major de l'òrbita de la terra per GM=1
+e = 0.01671123 # excentricitat de l'òrbita de la terra
+x_0 = a*(1 - e)
+v_y_0 = np.sqrt((1/a)*(1+e)/(1-e)) 
 y_0 = 0
 v_x_0 = 0
 r = [x_0, y_0, v_x_0, v_y_0]
@@ -20,7 +21,7 @@ y_t=[y_0]
 t_t = [0]
 
 t = 0 
-h = 1/365
+h = 1/(365.256 * 24)
 
 
 #[fx,fy,fvx,fvy]
